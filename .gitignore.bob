@@ -1,0 +1,8 @@
+.virtualenv
+.build
+.public
+output
+pelican.pid
+srv.pid
+*.pyc
+.*.swp

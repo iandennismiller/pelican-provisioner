@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- #
+
+DEBUG=True
+
+AUTHOR = u"{{{ siteauthor }}}"
+SITENAME = u"{{{ sitename }}}"
+SITEURL = 'http://localhost:8000'
+PATH = 'content'
+THEME = "theme-iandennismiller"
+
+#TUMBLR = ""
+#TWITTER_USERNAME = ""
+
+TIMEZONE = 'America/Toronto'
+DEFAULT_LANG = 'en'
+DEFAULT_PAGINATION = 5
+DEFAULT_ORPHANS = 1
+SUMMARY_MAX_LENGTH = 16
+
+PLUGINS = ['pelican.plugins.assets',]
+
+STATIC_PATHS = ['assets']
+
+ARTICLE_URL = '/posts/{slug}.html'
+ARTICLE_SAVE_AS = 'posts/{slug}.html'
+
+RELATIVE_URLS = False
+
+FEED_RSS = 'feeds/all.rss.xml'
+FEED_MAX_ITEMS = 10
+CATEGORY_FEED_ATOM = None
+
+FILES_TO_COPY = (
+  ('extra/robots.txt', 'robots.txt'),
+  ('extra/.htaccess', '.htaccess'),
+  #('extra/google.html', 'google.html'),
+)
+
+# Menu Items
+DISPLAY_PAGES_ON_MENU = False
+MENUITEMS = (("Home", "/"),
+#  ("Articles", "/#article_list"),
+  ("Projects", "/pages/projects.html"),
+#  ("About", "/pages/about.html"),
+#  ("Contact", "/pages/contact.html"),
+#  ("Subscribe", "/feeds/all.atom.xml"),
+#  ("Follow", "http://twitter.com/iandennismiller"),
+
+  #("CV &amp; Resume", "/pages/curriculum-vitae-resume.html"),
+  )
