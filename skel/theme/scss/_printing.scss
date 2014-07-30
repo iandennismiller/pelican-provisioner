@@ -1,0 +1,53 @@
+div#web_address {
+    color: $primary-color;
+    text-align: center;
+}
+
+@media screen {
+    div#web_address {
+        display: none;
+    }
+}
+
+@media print {
+    div#web_address {
+        display: block;
+    }
+
+    nav {
+        display: none !important;
+    }
+
+    #banner h1 {
+        font-size: 2em !important;
+    }
+
+    .entry-content a, .post-info a {
+        text-decoration: none !important;
+        font-family: monospace;
+        font-size: 11pt;
+        color: $primary-color !important;
+    }
+
+    .entry-content a:before, .post-info a:before {
+        content: "[";
+    }
+
+    .entry-content a:after {
+        content: "](http://imiller.utsc.utoronto.ca" attr(href) ")";
+        $bg-color-space: pre;
+        overflow-wrap: break-word;
+    }
+
+    .entry-content a[href^="http://"]:after, .post-info a:after {
+        content: "](" attr(href) ")";
+        $bg-color-space: pre;
+        overflow-wrap: break-word;
+    }
+
+    .entry-content a[href^="https://"]:after {
+        content: "](" attr(href) ")";
+        $bg-color-space: pre;
+        overflow-wrap: break-word;
+    }
+}

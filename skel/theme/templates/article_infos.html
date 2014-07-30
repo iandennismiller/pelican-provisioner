@@ -1,0 +1,6 @@
+<div class="post-info">
+    <abbr class="published" title="{{ article.date.isoformat() }}">{{ article.date.strftime('%A, %B %d, %Y') }}</abbr> in
+    <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>{% if PDF_PROCESSOR %}<a href="{{ SITEURL }}/pdf/{{ article.slug }}.pdf">get the pdf</a>{% endif %}
+{# {% include 'taglist.html' %}
+{% include 'translations.html' %} #}
+</div><!-- /.post-info -->
