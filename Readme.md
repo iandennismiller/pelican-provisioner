@@ -8,3 +8,13 @@ git clone git@oxford.saperea.com:skel/pelican.git ~/scratch/pelican
 
 workon mrbob
 mrbob -w ~/scratch/pelican/skel
+
+## create a new virtual environment with the same name as the project path
+
+mkvirtualenv PROJECT_NAME
+
+## install requirements in virtual environment
+
+pip install fabric pelican mr.bob
+
+## install pelican theme
