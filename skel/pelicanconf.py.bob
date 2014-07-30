@@ -7,45 +7,63 @@ AUTHOR = u"{{{ siteauthor }}}"
 SITENAME = u"{{{ sitename }}}"
 SITEURL = 'http://localhost:8000'
 PATH = 'content'
-THEME = "theme-iandennismiller"
+THEME = "theme"
 
-#TUMBLR = ""
-#TWITTER_USERNAME = ""
-
-TIMEZONE = 'America/Toronto'
 DEFAULT_LANG = 'en'
-DEFAULT_PAGINATION = 5
+DEFAULT_PAGINATION = 4
 DEFAULT_ORPHANS = 1
-SUMMARY_MAX_LENGTH = 16
+TIMEZONE = 'America/Toronto'
 
-PLUGINS = ['pelican.plugins.assets',]
+ARTICLE_PATHS = ['post']
+ARTICLE_URL = '/post/{slug}.html'
+ARTICLE_SAVE_AS = 'post/{slug}.html'
+SUMMARY_MAX_LENGTH = 100
 
-STATIC_PATHS = ['assets']
+PAGE_PATHS = ['page']
+PAGE_URL = '/page/{slug}.html'
+PAGE_SAVE_AS = 'page/{slug}.html'
 
-ARTICLE_URL = '/posts/{slug}.html'
-ARTICLE_SAVE_AS = 'posts/{slug}.html'
+RELATIVE_URLS=False
+#RELATIVE_URLS = "root"
 
-RELATIVE_URLS = False
-
-FEED_RSS = 'feeds/all.rss.xml'
+FEED_ATOM = 'feed/all.atom.xml'
+FEED_ALL_ATOM = None
+FEED_ALL_RSS = None
+FEED_RSS = None
 FEED_MAX_ITEMS = 10
 CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
 
-FILES_TO_COPY = (
-  ('extra/robots.txt', 'robots.txt'),
-  ('extra/.htaccess', '.htaccess'),
-  #('extra/google.html', 'google.html'),
-)
+DIRECT_TEMPLATES = ('index', 'search')
+
+STATIC_PATHS = ['assets', 'extra', 'media']
+EXTRA_PATH_METADATA = {
+  'extra/robots.txt': {'path': 'robots.txt'},
+  'extra/favicon.ico': {'path': 'favicon.ico'},
+  'extra/.htaccess': {'path': '.htaccess'},
+}
 
 # Menu Items
 DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (("Home", "/"),
-#  ("Articles", "/#article_list"),
-  ("Projects", "/pages/projects.html"),
-#  ("About", "/pages/about.html"),
-#  ("Contact", "/pages/contact.html"),
-#  ("Subscribe", "/feeds/all.atom.xml"),
-#  ("Follow", "http://twitter.com/iandennismiller"),
-
-  #("CV &amp; Resume", "/pages/curriculum-vitae-resume.html"),
+  ("About", "/page/about.html"),
+  #("Archive", "/page/archive.html"),
+  #("Contact", "/page/contact.html"),
+  #("Subscribe", "/feed/all.atom.xml"),
   )
+
+PLUGIN_PATHS = ["/Users/idm/Library/Code/pelican-plugins"]
+PLUGINS = ['sitemap', 'assets', 'tipue_search']
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.5,
+        'indexes': 0.5,
+        'pages': 0.5
+    },
+    'changefreqs': {
+        'articles': 'monthly',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}

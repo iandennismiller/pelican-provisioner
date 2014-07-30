@@ -11,10 +11,12 @@ mrbob -w ~/scratch/pelican/skel
 
 ## create a new virtual environment with the same name as the project path
 
-mkvirtualenv PROJECT_NAME
+mkvirtualenv $PROJECT_NAME
 
 ## install requirements in virtual environment
 
-pip install fabric pelican mr.bob
+pip install fabric pelican mr.bob markdown webassets BeautifulSoup4
 
 ## install pelican theme
+
+pelican-themes -s ~/Work/$PROJECT_NAME/theme
