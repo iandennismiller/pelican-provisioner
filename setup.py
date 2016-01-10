@@ -50,6 +50,7 @@ setup(
 venv_path = os.environ.get("VIRTUAL_ENV")
 if venv_path:
     copy_tree("skel", os.path.join(venv_path, "share/skel"))
+    copy_tree("wheelhouse", os.path.join(venv_path, "share/wheelhouse"))
 else:
     print("This was not installed in a virtual environment")
     print("So, I won't install the skel files.")
