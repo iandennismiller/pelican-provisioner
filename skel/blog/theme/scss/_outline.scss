@@ -1,0 +1,36 @@
+section, article {
+  counter-reset: h2counter h3counter h4counter;
+}
+
+h2 {
+  counter-reset: h3counter h4counter;
+}
+
+h3 {
+  counter-reset: h4counter;
+}
+
+h2:before, h3:before, h4:before {
+    color: $bg-color;
+    background: $primary-color;
+    padding: 0.2em;
+    margin-right: 0.2em;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+h2:before {
+  counter-increment: h2counter;
+  content: counter(h2counter) ".";
+}
+
+h3:before {
+  counter-increment: h3counter;
+  content: counter(h2counter) "." counter(h3counter) ".";
+}
+
+h4:before {
+  counter-increment: h4counter;
+  content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".";
+}

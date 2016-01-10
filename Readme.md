@@ -1,5 +1,10 @@
 # pelican skeleton
 
+## Installation
+
+git clone git@oxford.saperea.com:skel/pelican-blog.git
+make install
+
 ## first clone the skeleton
 
 git clone git@oxford.saperea.com:skel/pelican.git ~/scratch/pelican

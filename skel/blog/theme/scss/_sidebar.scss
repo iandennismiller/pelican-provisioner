@@ -1,0 +1,71 @@
+/*
+	Extras
+*****************/
+#sidebar {
+    float: right;
+    margin: 1em 7% 2em 10px;
+	background: $bg-color;
+	overflow: hidden;
+	padding: 20px 20px;
+	width: 15%;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#sidebar ul {list-style: none; margin: 0;}
+#sidebar li {border-bottom: 1px solid $bg-color;}
+
+#sidebar h2 {
+	color: $active-color;
+	font-size: 1.429em;
+	margin-top: .75em;
+	margin-bottom: .25em;
+	padding: 0 3px;
+}
+
+#sidebar a:link, #sidebar a {
+	color: #444;
+	display: block;
+	border-bottom: 1px solid #F4E3E3;
+	text-decoration: none;
+	padding: .3em .25em;
+}
+#sidebar li.active a {color: $bg-color;}
+
+#sidebar li:last-child,
+#sidebar li:last-child a {border: 0}
+
+#sidebar .blogroll li:nth-last-child(2),
+#sidebar .blogroll li:nth-last-child(3),
+#sidebar .blogroll li:nth-last-child(2) a,
+#sidebar .blogroll li:nth-last-child(3) a {border: 0;}
+
+#sidebar a:hover, #sidebar a:active {color: $bg-color;}
+
+/* Blogroll */
+#sidebar .blogroll {
+	width: 100%;
+}
+
+#sidebar .blogroll li {float: left; margin: 0 20px 0 0; width: 185px;}
+
+
+.social a {
+	background-repeat: no-repeat;
+	background-position: 3px 6px;
+}
+
+/* Icons */
+.social a[href*='delicious.com']:before {content: url('../images/icons/delicious.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='digg.com']:before {content: url('../images/icons/digg.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='facebook.com']:before {content: url('../images/icons/facebook.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='atom.xml']:before {content: url('../images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='last.fm']:before, .social a[href*='lastfm.']:before {content: url('../images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='jamendo.com']:before {content: url('../images/icons/jamendo.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='stackoverflow.com']:before {content: url('../images/icons/stackoverflow.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='rss.xml']:before {content: url('../images/icons/rss.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='twitter.com']:before {content: url('../images/icons/twitter.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='linkedin.com']:before {content: url('../images/icons/linkedin.png'); margin-right: 2px; vertical-align: -3px;}
+.social a[href*='gitorious.org']:before {content: url('../images/icons/gitorious.png'); margin-right: 2px; vertical-align: -3px;}

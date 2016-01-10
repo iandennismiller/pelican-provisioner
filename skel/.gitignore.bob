@@ -1,9 +1,10 @@
 .virtualenv
 .build
 .public
-output
-pelican.pid
-srv.pid
+blog/output
+blog/pelican.pid
+blog/srv.pid
 *.pyc
 .*.swp
-cache
+/dist/
+/*.egg-info/
