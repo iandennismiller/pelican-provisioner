@@ -18,4 +18,4 @@ source $(which virtualenvwrapper.sh) && \
 popd
 
 echo "Install pelican plugins"
-cp -r -v $PLUGINS_PATH $1/blog/pelican-plugins
+cp -r -v $PLUGINS_PATH $1/blog

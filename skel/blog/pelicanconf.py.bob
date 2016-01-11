@@ -52,8 +52,11 @@ MENUITEMS = (("Home", "/"),
   #("Subscribe", "/feed/all.atom.xml"),
   )
 
-PLUGIN_PATHS = ["/Users/idm/Library/Code/pelican-plugins"]
-PLUGINS = ['sitemap', 'assets', 'tipue_search']
+PLUGIN_PATHS = ["pelican-plugins", ]
+PLUGINS = [
+    'assets',
+]
+
 SITEMAP = {
     'format': 'xml',
     'priorities': {
