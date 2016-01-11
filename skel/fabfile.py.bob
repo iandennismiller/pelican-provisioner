@@ -112,24 +112,24 @@ def vcard():
 
 def tidy():
     "clean up output dir"
-    local("find output/ -name '.DS_Store' -delete")
+    local("find blog/output/ -name '.DS_Store' -delete")
 
     # delete specific files
     file_list = [
-        "output/archives.html",
-        "output/authors.html",
-        "output/categories.html",
-        "output/tags.html",
+        "blog/output/archives.html",
+        "blog/output/authors.html",
+        "blog/output/categories.html",
+        "blog/output/tags.html",
     ]
     local("rm -f {0}".format(" ".join(file_list)))
 
     # delete entire paths
     dir_list = [
-        "output/author",
-        "output/drafts",
-        "output/theme/.webassets-cache",
-        "output/theme/css",
-        "output/theme/js"
+        "blog/output/author",
+        "blog/output/drafts",
+        "blog/output/theme/.webassets-cache",
+        "blog/output/theme/css",
+        "blog/output/theme/js"
     ]
     local("rm -rf {0}".format(" ".join(dir_list)))
 

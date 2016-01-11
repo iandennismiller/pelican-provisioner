@@ -27,6 +27,7 @@ Using the blog
     workon my-blog
     cd ~/Work/my-blog
     make regenerate # to develop locally
+    make serve # to test it locally at http://localhost:8000
     make deploy # to make the changes public
 
 Rationale

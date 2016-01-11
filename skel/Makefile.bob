@@ -1,14 +1,7 @@
-# pelican-blog (c) 2014-2016 Ian Dennis Miller
+# {{ sitename }} (c) {{ siteauthor }}
 
 SHELL=/bin/bash
 PROJECT_NAME={{ sitename }}
-MOD_NAME={{ sitename }}
-
-install:
-	pip install --use-wheel --find-links=wheelhouse --no-index -r requirements.txt
-
-virtualenv:
-	source $$(which virtualenvwrapper.sh) && mkvirtualenv --no-site-packages {{ sitename }}
 
 html:
 	cd blog && make html
@@ -16,17 +9,17 @@ html:
 regenerate:
 	cd blog && make regenerate
 
-serve:
-	fab serve
-
 deploy:
 	cd blog && make publish rsync_upload
+
+serve:
+	fab serve
 
 new:
 	fab new:'$(filter-out $@,$(MAKECMDGOALS))'
 	ls -alF 'blog/content/posts/$(filter-out $@,$(MAKECMDGOALS)).md'
 
 tidy:
-	cd blog && fab tidy
+	fab tidy
 
-.PHONY: install build-wheels install-wheels virtualenv html regenerate serve deploy new tidy
+.PHONY: html regenerate serve deploy new tidy
