@@ -8,15 +8,15 @@ Installation
 
 ::
 
-    mkvirtualenv pelican-blog
-    pip install git+http://oxford.saperea.com/skel/pelican-blog.git
+    mkvirtualenv pelican-provisioner
+    pip install git+http://github.com/iandennismiller/pelican-provisioner.git
 
 Create a blog
 -------------
 
 ::
 
-    workon pelican-blog
+    workon pelican-provisioner
     new-blog.sh ~/Work/my-blog
 
 Using the blog
