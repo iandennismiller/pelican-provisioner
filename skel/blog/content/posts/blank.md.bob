@@ -2,6 +2,4 @@ category: website
 date: 2010-04-01
 title: blank post
 
-[{{{ url }}}](http://{{{ url }}})!!!
-
-This is a simple post.
+This is a simple post.  It has been published to [the blog](http://{{{ url }}}).
