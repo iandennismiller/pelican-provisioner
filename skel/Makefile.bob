@@ -1,3 +1,5 @@
+# pelican-blog (c) 2014-2016 Ian Dennis Miller
+
 SHELL=/bin/bash
 PROJECT_NAME={{ sitename }}
 MOD_NAME={{ sitename }}
@@ -15,13 +17,13 @@ regenerate:
 	cd blog && make regenerate
 
 serve:
-	cd blog && make serve
+	fab serve
 
 deploy:
 	cd blog && make publish rsync_upload
 
 new:
-	cd blog && fab new:'$(filter-out $@,$(MAKECMDGOALS))'
+	fab new:'$(filter-out $@,$(MAKECMDGOALS))'
 	ls -alF 'blog/content/posts/$(filter-out $@,$(MAKECMDGOALS)).md'
 
 tidy:

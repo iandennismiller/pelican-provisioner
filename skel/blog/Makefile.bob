@@ -47,9 +47,6 @@ clean:
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-serve:
-	$(BASEDIR)/bin/http_server.py
-
 devserver:
 	$(BASEDIR)/develop_server.sh restart
 
