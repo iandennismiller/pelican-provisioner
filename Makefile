@@ -10,3 +10,8 @@ build-wheels:
 
 add-plugins:
 	git submodule add https://github.com/getpelican/pelican-plugins share/pelican-plugins
+
+clean:
+	rm -rf build dist *.egg-info
+
+.PHONY: install build-wheels install-wheels clean

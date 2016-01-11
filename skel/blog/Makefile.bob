@@ -47,9 +47,6 @@ clean:
 regenerate: clean
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-devserver:
-	$(BASEDIR)/develop_server.sh restart
-
 publish:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
@@ -69,11 +66,4 @@ github: publish
 	ghp-import $(OUTPUTDIR)
 	git push origin gh-pages
 
-###########
-# specific to this project
-
-tidy:
-	find $(OUTPUTDIR) -name ".DS_Store" -delete
-	rm -rf $(OUTPUTDIR)/theme/.webassets-cache
-
-.PHONY: html help clean regenerate serve devserver publish ssh_upload rsync_upload dropbox_upload ftp_upload github tidy
+.PHONY: html help clean regenerate publish ssh_upload rsync_upload dropbox_upload ftp_upload github

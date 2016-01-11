@@ -19,3 +19,4 @@ popd
 
 echo "Install pelican plugins"
 cp -r -v $PLUGINS_PATH $1/blog
+rm -v $1/blog/.git $1/blog/.gitmodules
