@@ -1,4 +1,4 @@
-# pelican-blog (c) 2016 Ian Dennis Miller
+# pelican-provisioner (c) 2016 Ian Dennis Miller
 
 SHELL=/bin/bash
 

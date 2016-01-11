@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# pelican-blog (c) Ian Dennis Miller
+# pelican-provisioner (c) Ian Dennis Miller
 
 from setuptools import setup
 from distutils.dir_util import copy_tree
@@ -16,7 +16,7 @@ def read(fname):
     return open(fpath(fname)).read()
 
 
-file_text = read(fpath('pelican_blog/__meta__.py'))
+file_text = read(fpath('pelican_provisioner/__meta__.py'))
 
 
 def grep(attrname):
@@ -27,10 +27,10 @@ def grep(attrname):
 
 setup(
     version=grep('__version__'),
-    name='pelican-blog',
+    name='pelican-provisioner',
     description="A system for provisioning blogs managed by Pelican.",
     packages=[
-        "pelican_blog",
+        "pelican_provisioner",
     ],
     scripts=[
         "bin/new-blog.sh",
