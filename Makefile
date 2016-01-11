@@ -14,4 +14,7 @@ add-plugins:
 clean:
 	rm -rf build dist *.egg-info
 
-.PHONY: install build-wheels install-wheels clean
+release:
+	python setup.py sdist upload -r https://pypi.python.org/pypi
+
+.PHONY: install build-wheels install-wheels clean release

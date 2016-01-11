@@ -36,7 +36,16 @@ setup(
         "bin/new-blog.sh",
     ],
     long_description=read('Readme.rst'),
-    classifiers=[],  # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Environment :: Console",
+        "Intended Audience :: Information Technology",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: POSIX",
+        "Programming Language :: Python :: 2.7",
+        "Topic :: Internet :: WWW/HTTP",
+    ],
     include_package_data=True,
     keywords='',
     author=grep('__author__'),
