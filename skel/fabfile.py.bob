@@ -24,7 +24,7 @@ def new(title="untitled"):
     "create a new article; fab new:'some title'"
     now = datetime.datetime.now()
     datestamp = "%d-%0.2d-%0.2d" % (now.year, now.month, now.day)
-    filename = "blog/content/posts/%s.md" % (title)
+    filename = "blog/content/drafts/%s.md" % (title)
     with open(filename, "w") as f:
         f.write(template.format(datestamp=datestamp, title=title))
 
