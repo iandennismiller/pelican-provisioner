@@ -6,22 +6,28 @@ This package creates a working environment for a static blog that is generated b
 Installation
 ------------
 
-mkvirtualenv pelican-blog
-pip install git+http://oxford.saperea.com/skel/pelican-blog.git
+::
+
+    mkvirtualenv pelican-blog
+    pip install git+http://oxford.saperea.com/skel/pelican-blog.git
 
 Create a blog
 -------------
 
-workon pelican-blog
-new-blog.sh ~/Work/my-blog
+::
+
+    workon pelican-blog
+    new-blog.sh ~/Work/my-blog
 
 Using the blog
 --------------
 
-workon my-blog
-cd ~/Work/my-blog
-make regenerate # to develop locally
-make deploy # to make the changes public
+::
+
+    workon my-blog
+    cd ~/Work/my-blog
+    make regenerate # to develop locally
+    make deploy # to make the changes public
 
 Rationale
 ---------
