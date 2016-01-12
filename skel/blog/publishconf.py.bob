@@ -19,6 +19,3 @@ RELATIVE_URLS = False
 #DISQUS_SITENAME = ""
 #GOOGLE_ANALYTICS = ""
 #TWITTER_USERNAME = ""
-
-#PIWIK_URL = "track.w3n.org/piwik"
-#PIWIK_SITE_ID = 1
