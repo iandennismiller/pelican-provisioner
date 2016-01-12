@@ -31,7 +31,7 @@ def new(title="untitled"):
 
 def shell():
     "open a shell on the remote system"
-    os.system("ssh {{ ssh_user }}@{{ ssh_host }}")
+    os.system("ssh {{{ ssh_user }}}@{{{ ssh_host }}}")
 
 
 def pics(folder="content/assets"):

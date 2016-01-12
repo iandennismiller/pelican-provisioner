@@ -1,6 +1,6 @@
-# {{ url }}
+# {{{ url }}}
 
-This is the blog/website for {{ url }}.  It's built with Python Pelican.
+This is the blog/website for {{{ url }}}.  It's built with Python Pelican.
 
 ## create a post
 

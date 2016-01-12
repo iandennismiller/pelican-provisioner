@@ -1,7 +1,7 @@
-# {{ sitename }} (c) {{ siteauthor }}
+# {{{ sitename }}} (c) {{{ siteauthor }}}
 
 SHELL=/bin/bash
-PROJECT_NAME={{ sitename }}
+PROJECT_NAME={{{ sitename }}}
 
 html:
 	cd blog && make html
