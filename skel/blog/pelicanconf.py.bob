@@ -29,17 +29,23 @@ FEED_MAX_ITEMS = 10
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
-STATIC_PATHS = ['assets', 'extra', 'media']
+STATIC_PATHS = [
+    'assets',
+    'extra/robots.txt',
+    'extra/.htaccess',
+]
+
 EXTRA_PATH_METADATA = {
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'},
     'extra/.htaccess': {'path': '.htaccess'},
 }
+
 
 # Menu Items
 DISPLAY_PAGES_ON_MENU = False
 MENUITEMS = (("Home", "/"),
     ("About", "/pages/about.html"),
+    ("Subscribe", "/feeds/all.atom.xml"),
 )
 
 PLUGIN_PATHS = ["pelican-plugins", ]

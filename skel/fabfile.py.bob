@@ -31,7 +31,7 @@ def new(title="untitled"):
 
 def shell():
     "open a shell on the remote system"
-    os.system("ssh idmiller_idm@ssh.phx.nearlyfreespeech.net")
+    os.system("ssh {{ ssh_user }}@{{ ssh_host }}")
 
 
 def pics(folder="content/assets"):
@@ -96,11 +96,10 @@ def pics(folder="content/assets"):
         pass
 
 
-def qr():
+def qr(url, destination="content/assets/qr.png"):
     "create a QR code for a URL"
-    url = "http://www.iandennismiller.com/pages/contact.html"
     cmd = "qrencode -l H -t PNG -o {file} '{url}'"
-    local(cmd.format(file="content/assets/qr.png", url=url))
+    local(cmd.format(file=destination, url=url))
 
 
 def vcard():
