@@ -7,7 +7,7 @@ blinker==1.4
 closure==20120305
 cssmin==0.1.4
 docutils==0.12
-ecdsa==0.13
+ecdsa==0.13.3
 fabric==1.10.2
 feedgenerator==1.7
 html5lib==0.95
