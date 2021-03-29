@@ -1,7 +1,7 @@
 Jinja2==2.7.3
 Markdown==2.2.0
 PyScss==1.1.5
-Pygments==2.0.2
+Pygments==2.7.4
 Unidecode==0.4.18
 blinker==1.4
 closure==20120305
