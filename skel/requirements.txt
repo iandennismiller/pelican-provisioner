@@ -14,7 +14,7 @@ html5lib==0.95
 html5tidy==1.0
 jsmin==2.0.2
 lxml==3.2.1
-paramiko==1.15.3
+paramiko==2.10.1
 pelican==3.6.3
 pycrypto==2.6.1
 python-dateutil==2.4.2
