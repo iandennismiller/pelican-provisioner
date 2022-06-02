@@ -10,7 +10,7 @@ docutils==0.12
 ecdsa==0.13.3
 fabric==1.10.2
 feedgenerator==1.7
-html5lib==0.95
+html5lib==0.99999999
 html5tidy==1.0
 jsmin==2.0.2
 lxml==3.2.1
